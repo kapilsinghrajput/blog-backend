@@ -13,7 +13,14 @@ connectToMongo();
 
 // cors  
 
-app.use(cors())
+app.use(cors(
+  {
+    origin:["https://jocular-bavarois-df10e0.netlify.app"],
+    methods:["POST","GET"],
+    credentials:true
+  }
+))
+
 app.use(express.json())
 app.use(express.static("public/upload"))
 app.get("/",(req,res)=>{
