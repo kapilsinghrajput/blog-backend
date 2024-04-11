@@ -19,17 +19,17 @@ class blogController{
   // addBlog
 
   static addBlog = async(req, res)=>{
-    const {title,category,description} = req.body;
+    const {title,category,description,user} = req.body;
     try {
 
-      if(title && category && description){
-         
+      if(title && category && description && user){
+         console.log("req.user",req.user)
         const addBlogs = new blogModel({
           title:title,
           description:description,
           category:category,
           thumbnail:req.file.filename,
-          user:req.user._id,
+          user:user,
         })
 
        
