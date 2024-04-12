@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 mongoose.connect( `mongodb+srv://kplsinghshekhawat:kapil12345@cluster0.m5zfg7x.mongodb.net/myusers`, {
-    useNewUrlParser: true,   
     serverSelectionTimeoutMS: 5000,    
     autoIndex: false, // Don't build indexes 
     maxPoolSize: 10, // Maintain up to 10 socket connections
