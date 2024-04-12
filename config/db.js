@@ -14,5 +14,3 @@ mongoose.connect( `mongodb+srv://kplsinghshekhawat:kapil12345@cluster0.m5zfg7x.m
    console.error('MongoDB connection error: ', err);
  }); 
 
-
-module.exports = connectToMongo

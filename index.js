@@ -4,15 +4,14 @@ const cors = require("cors");
 
 const PORT = process.env.PORT || 8000;
 const app = express();
-const  connectToMongo = require("./config/db.js");
+require("./config/db.js");
 const  authRoutes = require("./routes/blogs.js");
 
  
 //mongoose connect
-connectToMongo();
 
 // cors  
-app.use(cors()); 
+app.use(cors(origin="http://localhost:3000/")); 
 
 app.use(express.json())
 app.use(express.static("public/upload"))
