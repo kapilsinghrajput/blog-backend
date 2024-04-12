@@ -22,13 +22,7 @@ const router = express.Router();
 router.post("/user/register", authController.userRegistration)
 router.post("/user/login", authController.userLogin)
 
-router.get("/", (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*")
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    res.setHeader("Access-Control-Max-Age", "1800");
-    res.setHeader("Access-Control-Allow-Headers", "content-type");
-    res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" ); 
-     });
+
 
 //protected routes
 
