@@ -5,7 +5,6 @@
     "start": "nodemon index.js"
 
   },
-  
 
   "dependencies": {
 
@@ -25,7 +24,9 @@
 
     "multer": "^1.4.5-lts.1",
 
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+
+    "s3fs": "^2.5.0"
 
   }
 

@@ -4,10 +4,12 @@ const blogController = require("../controllers/blogcontroller.js");
 const categoryController = require("../controllers/categoryController.js");
 const multer = require("multer");
 const cheackIsUserAuthenticated = require("../middlewares/authMiddleware.js");
+var S3FS = require('s3fs');
+var fsImpl = new S3FS('test-bucket', options);
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, "public/upload")
+        cb(null, fsImpl.readFile("/public/upload"))
     },
     filename: function (req, file, cb) {
           cb(null, `${Date.now()}-${file.originalname}`)
