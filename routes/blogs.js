@@ -5,7 +5,7 @@ const categoryController = require("../controllers/categoryController.js");
 const multer = require("multer");
 const cheackIsUserAuthenticated = require("../middlewares/authMiddleware.js");
 var S3FS = require('s3fs');
-var fsImpl = new S3FS('test-bucket', options);
+var fsImpl = new S3FS('test-bucket',);
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
