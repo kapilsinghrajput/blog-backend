@@ -11,7 +11,7 @@ const  authRoutes = require("./routes/blogs.js");
 //mongoose connect
 
 // cors  
-app.use(cors(origin="http://localhost:3000/")); 
+app.use(cors(origin="https://dull-cyan-dhole-slip.cyclic.app/")); 
 
 app.use(express.json())
 app.use(express.static("public/upload"))
